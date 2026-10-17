@@ -3,25 +3,20 @@
     <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
     <AssemblyName>StangaNetLib.Caching</AssemblyName>
     <RootNamespace>StangaNetLib.Caching</RootNamespace>
-    <Description>Unified cache abstraction for Clean Architecture: ICacheService with InMemory and Redis implementations, GetOrSetAsync cache-aside, prefix invalidation, and CacheKeyBuilder.</Description>
-    <PackageTags>caching;redis;inmemory;cache-aside;clean-architecture</PackageTags>
-    <Version>1.0.1</Version>
+    <Description>Unified cache abstraction for Clean Architecture: ICacheService with InMemory and Redis implementations, GetOrSetAsync cache-aside, prefix invalidation, and CacheKeyBuilder. Depends on StangaNetLib.Concurrency and StangaNetLib.Resilience.</Description>
+    <PackageTags>caching;redis;inmemory;cache-aside;clean-architecture;stanganet</PackageTags>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- StangaNetLib foundation — required -->
     <PackageReference Include="StangaNetLib.Concurrency" />
     <PackageReference Include="StangaNetLib.Resilience" />
-
-    <!-- Microsoft caching abstractions — included in .NET runtime, referenced explicitly for class library compilation -->
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
     <PackageReference Include="Microsoft.Extensions.Options" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
-
-    <!-- Redis client — required for RedisCacheService -->
     <PackageReference Include="StackExchange.Redis" />
   </ItemGroup>
 
@@ -30,6 +25,34 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\..\build\**" Pack="true" PackagePath="build/" />
+  </ItemGroup>
+
+  <Target Name="StampBuildProps" BeforeTargets="GenerateNuspec">
+    <PropertyGroup>
+      <_BuildPropsFile>$(MSBuildThisFileDirectory)..\..\build\StangaNetLib.Caching.props</_BuildPropsFile>
+    </PropertyGroup>
+    <ItemGroup>
+      <_BPLines Include="&lt;Project&gt;" />
+      <_BPLines Include="  &lt;ItemGroup&gt;" />
+      <_BPLines Include="    &lt;AssemblyAttribute Include=&quot;System.Reflection.AssemblyMetadataAttribute&quot;&gt;" />
+      <_BPLines Include="      &lt;_Parameter1&gt;StangaNetLib.Caching&lt;/_Parameter1&gt;" />
+      <_BPLines Include="      &lt;_Parameter2&gt;$(Version)&lt;/_Parameter2&gt;" />
+      <_BPLines Include="    &lt;/AssemblyAttribute&gt;" />
+      <_BPLines Include="  &lt;/ItemGroup&gt;" />
+      <_BPLines Include="&lt;/Project&gt;" />
+    </ItemGroup>
+    <WriteLinesToFile
+      File="$(_BuildPropsFile)"
+      Lines="@(_BPLines)"
+      Overwrite="true"
+      Encoding="UTF-8" />
+    <Message Text="StangaNetLib.Caching: stamped build props with version $(Version)" Importance="high" />
+  </Target>
+
+  <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\assets\package-icon.png" Pack="true" PackagePath="\" />
+    <None Include="..\..\CHANGELOG.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>
