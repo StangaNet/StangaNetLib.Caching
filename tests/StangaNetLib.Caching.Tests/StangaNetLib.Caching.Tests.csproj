@@ -3,7 +3,8 @@
     <AssemblyName>StangaNetLib.Caching.Tests</AssemblyName>
     <RootNamespace>StangaNetLib.Caching.Tests</RootNamespace>
     <IsPackable>false</IsPackable>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <UseAppHost>true</UseAppHost>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,9 +14,13 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="FluentAssertions" />
-    <PackageReference Include="Microsoft.Extensions.Caching.Memory" />
     <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
     <PackageReference Include="StangaNetLib.Concurrency" />
+
   </ItemGroup>
 
   <ItemGroup>
