@@ -1,3 +1,8 @@
-- @azure Rule - Use Azure Tools - When handling requests related to Azure, always use your tools.
-- @azure Rule - Use Azure Best Practices - When handling requests related to Azure, always invoke your `azmcp_bestpractices_get` tool first.
-- @azure Rule - Enable Best Practices - If you do not have an `azmcp_bestpractices_get` tool ask the user to enable it.
+# StangaNetLib.Caching — Copilot instructions
+
+- Unified `ICacheService` / `IDistributedLockService` over InMemory and Redis, built on `StangaNetLib.Concurrency` and `StangaNetLib.Resilience`.
+- Prefer `Result` / `Result<T>` for cache/lock outcomes; reserve exceptions for invalid configuration / arguments.
+- Keep public APIs documented (`///`), provider-agnostic at the call site, and free of host-specific infrastructure.
+- DI entry point is `AddStangaNetLibCaching` in `StangaNetLib.Caching.Extensions`.
+- Match existing naming, file-scoped namespaces, and EditorConfig / Roslyn conventions.
+- Tests use xUnit v3 + FluentAssertions; cover both `net8.0` and `net9.0` when changing shared behavior. Redis-specific tests may stay integration-only.
