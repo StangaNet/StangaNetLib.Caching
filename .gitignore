@@ -1,0 +1,89 @@
+## StangaNetLib.Caching — .NET library gitignore
+## Based on github/gitignore VisualStudio template, trimmed for this repo.
+
+# Build outputs
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+.artifacts/
+*.binlog
+MSBuild_Logs/
+project.lock.json
+project.fragment.lock.json
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+
+# Test / coverage
+[Tt]est[Rr]esult*/
+*.trx
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+coverage*.json
+coverage*.xml
+coverage*.info
+*.coverage
+*.coveragexml
+*.dotCover
+BenchmarkDotNet.Artifacts/
+OpenCover/
+
+# IDE / editor
+.vs/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.user
+*.userosscache
+*.rsuser
+*.suo
+*.sln.docstates
+*.userprefs
+*.DotSettings.user
+_ReSharper*/
+*.[Rr]e[Ss]harper
+.localhistory/
+.vshistory/
+.ionide/
+*.swp
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Local secrets / env
+*.env
+.env.*
+!.env.example
+*.pfx
+secrets.json
+appsettings.*.local.json
+
+# Publish / deploy leftovers
+publish/
+*.pubxml
+*.publishproj
+*.[Pp]ublish.xml
+PublishScripts/
+
+# Misc tooling caches
+graphify-out/
+.cache/
+*.log
+*.tmp
+*.temp
