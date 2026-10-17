@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-10-17
+
+### Fixed
+- Republish with Microsoft.Extensions.* 8.x and StackExchange.Redis 2.8.x dependency graph. GitHub Packages retained a prior `1.0.0` nuspec that pulled ME 10.x / Redis 3.x, causing NU1605 downgrades in consumers (e.g. Auth).
+
 ## [1.0.0] - 2026-10-17
 
 ### Added
@@ -18,5 +23,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Depends on `StangaNetLib.Concurrency` 1.0.0 and `StangaNetLib.Resilience` 1.0.0; Microsoft.Extensions.* pinned to 8.x; StackExchange.Redis 2.8.x (avoids ME 10 pull from Redis 3.x).
 - CI via shared StangaNet reusable workflow (push / PR / manual; publish outside PRs).
 
-[Unreleased]: https://github.com/StangaNet/StangaNetLib.Caching/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/StangaNet/StangaNetLib.Caching/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/StangaNet/StangaNetLib.Caching/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/StangaNet/StangaNetLib.Caching/releases/tag/v1.0.0
