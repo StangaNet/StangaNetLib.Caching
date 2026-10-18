@@ -1,4 +1,4 @@
-## StangaNetLib.Caching — .NET library gitignore
+## StangaNetLib.Caching â€” .NET library gitignore
 ## Based on github/gitignore VisualStudio template, trimmed for this repo.
 
 # Build outputs
@@ -82,7 +82,6 @@ publish/
 PublishScripts/
 
 # Misc tooling caches
-graphify-out/
 .cache/
 *.log
 *.tmp

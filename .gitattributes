@@ -1,4 +1,4 @@
-## StangaNetLib.Caching — line endings, diffs, and export rules
+## StangaNetLib.Caching â€” line endings, diffs, and export rules
 ## Working tree and GitHub: LF. Matches .editorconfig end_of_line = lf.
 
 # Default: detect text, normalize to LF in the repository
@@ -27,7 +27,7 @@
 *.cmd         text eol=crlf
 *.bat         text eol=crlf
 
-# Binary — never normalize
+# Binary â€” never normalize
 *.png   binary
 *.jpg   binary
 *.jpeg  binary
@@ -55,7 +55,6 @@ docs/** linguist-documentation
 .gitignore      export-ignore
 .github/        export-ignore
 .editorconfig   export-ignore
-graphify-out/   export-ignore
 artifacts/      export-ignore
 TestResults/    export-ignore
 
