@@ -86,3 +86,5 @@ PublishScripts/
 *.log
 *.tmp
 *.temp
+
+graphify-out/
