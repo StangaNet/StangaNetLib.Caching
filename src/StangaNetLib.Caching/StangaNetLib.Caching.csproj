@@ -5,7 +5,7 @@
     <RootNamespace>StangaNetLib.Caching</RootNamespace>
     <Description>Unified cache abstraction for Clean Architecture: ICacheService with InMemory and Redis implementations, GetOrSetAsync cache-aside, prefix invalidation, and CacheKeyBuilder. Depends on StangaNetLib.Concurrency and StangaNetLib.Resilience.</Description>
     <PackageTags>caching;redis;inmemory;cache-aside;clean-architecture;stanganet</PackageTags>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
