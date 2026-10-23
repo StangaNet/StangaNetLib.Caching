@@ -5,4 +5,4 @@
 - Keep public APIs documented (`///`), provider-agnostic at the call site, and free of host-specific infrastructure.
 - DI entry point is `AddStangaNetLibCaching` in `StangaNetLib.Caching.Extensions`.
 - Match existing naming, file-scoped namespaces, and EditorConfig / Roslyn conventions.
-- Tests use xUnit v3 + FluentAssertions; cover both `net8.0` and `net9.0` when changing shared behavior. Redis-specific tests may stay integration-only.
+- Tests use xUnit v3 + FluentAssertions; cover `net8.0`, `net9.0`, and `net10.0` when changing shared behavior. Redis-specific tests may stay integration-only.

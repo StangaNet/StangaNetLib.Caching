@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
     <AssemblyName>StangaNetLib.Caching</AssemblyName>
     <RootNamespace>StangaNetLib.Caching</RootNamespace>
     <Description>Unified cache abstraction for Clean Architecture: ICacheService with InMemory and Redis implementations, GetOrSetAsync cache-aside, prefix invalidation, and CacheKeyBuilder. Depends on StangaNetLib.Concurrency and StangaNetLib.Resilience.</Description>

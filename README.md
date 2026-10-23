@@ -2,7 +2,7 @@
 
 [![.NET CI](https://github.com/StangaNet/StangaNetLib.Caching/actions/workflows/main.yml/badge.svg)](https://github.com/StangaNet/StangaNetLib.Caching/actions/workflows/main.yml)
 ![NuGet](https://img.shields.io/badge/nuget-1.0.0-blue)
-![.NET](https://img.shields.io/badge/.NET-8.0%20%7C%209.0-512BD4)
+![.NET](https://img.shields.io/badge/.NET-8.0%20%7C%209.0%20%7C%2010.0-512BD4)
 
 Unified, provider-agnostic caching and distributed locking for .NET. InMemory and Redis backends, thundering-herd protection via [`StangaNetLib.Concurrency`](https://github.com/StangaNet/StangaNetLib.Concurrency), resilient Redis commands via [`StangaNetLib.Resilience`](https://github.com/StangaNet/StangaNetLib.Resilience), and `Result` / `Result<T>` from [`StangaNetLib.Core`](https://github.com/StangaNet/StangaNetLib.Core).
 

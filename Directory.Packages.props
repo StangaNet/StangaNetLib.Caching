@@ -6,7 +6,7 @@
     <!-- StangaNetLib foundation — align with published 1.0.0 packages -->
     <PackageVersion Include="StangaNetLib.Concurrency" Version="1.0.0" />
     <PackageVersion Include="StangaNetLib.Resilience" Version="1.0.0" />
-    <!-- Runtime dependencies — align with lowest TFM (net8) for dual-targeting -->
+    <!-- Runtime dependencies — align with lowest TFM (net8) for multi-targeting (net8/net9/net10) -->
     <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="8.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.2" />
